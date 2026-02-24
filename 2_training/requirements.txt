@@ -1,0 +1,5 @@
+# GPU-only dependencies for training
+# These require CUDA and are not needed for inference
+bitsandbytes>=0.41.0
+wandb>=0.16.0
+tensorboard>=2.15.0

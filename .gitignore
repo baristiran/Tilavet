@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+eggs/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# ML artifacts
+3_models/*/
+*.safetensors
+*.bin
+*.pt
+*.onnx
+wandb/
+runs/
+mlruns/
+
+# Data (large files)
+data/*.json
+data/*.db
+data/audio/
+data/cache/
+data/translations/*.json
+*.wav
+*.mp3
+*.flac
+*.ogg
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database
+*.db
+
+# Claude
+.claude/

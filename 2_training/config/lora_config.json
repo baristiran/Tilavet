@@ -1,0 +1,36 @@
+{
+    "model_id": "openai/whisper-large-v3",
+    "language": "ar",
+    "task": "transcribe",
+
+    "lora": {
+        "r": 16,
+        "lora_alpha": 32,
+        "target_modules": ["q_proj", "k_proj", "v_proj", "out_proj"],
+        "lora_dropout": 0.05,
+        "bias": "none"
+    },
+
+    "training": {
+        "num_train_epochs": 3,
+        "per_device_train_batch_size": 8,
+        "per_device_eval_batch_size": 8,
+        "gradient_accumulation_steps": 4,
+        "learning_rate": 1e-4,
+        "lr_scheduler_type": "constant_with_warmup",
+        "warmup_steps": 100,
+        "fp16": true,
+        "logging_steps": 25,
+        "eval_steps": 1000,
+        "save_steps": 1000,
+        "save_total_limit": 3,
+        "generation_max_length": 225,
+        "max_duration_seconds": 30,
+        "load_in_8bit": false,
+        "predict_with_generate": true,
+        "report_to": "tensorboard"
+    },
+
+    "output_dir": "./3_models/whisper-large-v3-quran-lora",
+    "hub_model_id": "openquran/whisper-large-v3-quran-lora"
+}
